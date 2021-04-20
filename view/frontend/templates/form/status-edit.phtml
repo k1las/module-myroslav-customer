@@ -1,0 +1,33 @@
+<?php
+/** @var StatusEdit $block */
+
+use Myroslav\Customer\Block\Form\StatusEdit;
+
+?>
+<form class="form form-edit-account"
+      action="<?= $block->escapeUrl($block->getUrl('myroslav_customer/status/editPost')) ?>"
+      method="post"
+      enctype="multipart/form-data"
+      data-hasrequired="<?= $block->escapeHtmlAttr(__('* Required Fields')) ?>"
+      autocomplete="off" id="status_edit_form"
+      data-mage-init='{"validation":{"rules": {"customer_status": {"required":true}}}}'
+>
+    <fieldset class="fieldset customer-status" data-container="change-customer-status">
+        <?= $block->getBlockHtml('formkey') ?>
+        <div class="field email required" data-container="change-email">
+            <label class="label"
+                   for="customer_status"><span><?= $block->escapeHtml(__('Customer Status')) ?></span></label>
+            <div class="control">
+                <input type="text" name="customer_status" id="customer_status" autocomplete="customer_status"
+                       data-input="change-status"
+                       value="<?= $block->escapeHtmlAttr($block->getCustomer()->getCustomAttribute('customer_status')->getValue()) ?>"
+                       title="<?= $block->escapeHtmlAttr(__('Customer Status')) ?>"
+                       class="input-text"/>
+            </div>
+        </div>
+        <button type="submit" class="action save primary" title="<?= $block->escapeHtmlAttr(__('Save')) ?>">
+            <span><?= $block->escapeHtml(__('Save')) ?></span>
+        </button>
+    </fieldset>
+</form>
+
