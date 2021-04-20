@@ -2,6 +2,7 @@
   "name": "myroslav/module-myroslav-customer",
   "description": "N/A",
   "type": "magento2-module",
+  "minimum-stability": "dev",
   "license": [
     "OSL-3.0",
     "AFL-3.0"
