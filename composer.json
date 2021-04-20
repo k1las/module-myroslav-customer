@@ -1,21 +1,17 @@
 {
   "name": "myroslav/module-myroslav-customer",
   "description": "N/A",
-  "type": "magento2-module",
-  "minimum-stability": "dev",
-  "license": [
-    "OSL-3.0",
-    "AFL-3.0"
-  ],
-  "config": {
-    "sort-packages": true
-  },
-  "version": "1.0.0",
   "require": {
     "php": "~7.3.0||~7.4.0",
     "magento/framework": "*",
     "magento/module-customer": "*"
   },
+  "type": "magento2-module",
+  "version": "1.0.0",
+  "license": [
+    "OSL-3.0",
+    "AFL-3.0"
+  ],
   "autoload": {
     "files": [
       "registration.php"
